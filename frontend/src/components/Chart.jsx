@@ -39,7 +39,7 @@ function Chart({ title, description, text }) {
   const handleDeploy = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:8000/api/v1/user/${userId}/addblog`,
+        `https://instagram-9h25.onrender.com/api/v1/user/${userId}/addblog`,
         blogdata
       );
       toast.success("Blog has been created successfully!");
