@@ -30,7 +30,7 @@ const id = user?._id;
 useEffect(()=>{
     const fetchAllBlogData = async() => {
         try {
-          const response = await fetch(`http://localhost:8000/api/v1/user/${user?._id}/getblog`, {
+          const response = await fetch(`https://instagram-9h25.onrender.com/api/v1/user/${user?._id}/getblog`, {
             method: "GET",
           });
           const allData = await response.json();          
@@ -51,7 +51,7 @@ console.log(data);
 
 const deleteHandle = async(blogId) => {
   setLoading(true)
-  const res = await fetch(`http://localhost:8000/api/v1/user/deleteblog/${blogId}`,{
+  const res = await fetch(`https://instagram-9h25.onrender.com/api/v1/user/deleteblog/${blogId}`,{
     method : "DELETE",
   })  
   if(res?.ok){

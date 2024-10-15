@@ -63,7 +63,7 @@ const id = user?._id;
     const handleToSubmit = async(e) => {
      setLoading(true)   
     
-    const res = await axios.post(`http://localhost:8000/api/v1/user/${id}/addblog`,data,{
+    const res = await axios.post(`https://instagram-9h25.onrender.com/api/v1/user/${id}/addblog`,data,{
         headers : {
             'Content-Type' : 'application/json'
         }

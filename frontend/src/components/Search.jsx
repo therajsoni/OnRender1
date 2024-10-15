@@ -13,7 +13,7 @@ const SearchPage = () => {
   useEffect(() => {
     const fetchAllUsers = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/v1/user/getalluser/${user?._id}`);
+        const response = await axios.get(`https://instagram-9h25.onrender.com/api/v1/user/getalluser/${user?._id}`);
         const usernameAll = response.data.allUser;
 
         const usernames = usernameAll.map((user1) => ({ username: user1.username, _id: user1._id }));

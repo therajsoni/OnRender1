@@ -12,7 +12,7 @@ const TreadData = () => {
   useEffect(() => {
     const dataget = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/v1/user/${userId}/getblog`);
+        const response = await axios.get(`https://instagram-9h25.onrender.com/api/v1/user/${userId}/getblog`);
         setBlog(response?.data?.blogs);
       } catch (error) {
         console.error("Error:", error);
